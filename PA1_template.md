@@ -22,7 +22,7 @@ daySteps <- tapply(dataClean$steps, dataClean$date, sum)
 hist(daySteps, main="Number of steps per day", xlab="Total number of steps")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png)
 ##### 2. Calculate and report the mean and median total number of steps taken per day
 
 ```r
@@ -44,7 +44,7 @@ avg_steps <- aggregate(steps ~ interval, dataClean, mean)
 ggplot(avg_steps, aes(x = interval, y = steps)) +  geom_line(aes(group = 1, col = steps)) + ylab("average number of steps")+ xlab("interval") +  ggtitle("Average number of steps by Interval")
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
+![plot of chunk unnamed-chunk-21](figure/unnamed-chunk-21-1.png)
 
 
 
@@ -85,7 +85,7 @@ dayStepsFull <- tapply(data$steps, data$date, sum)
 hist(dayStepsFull, main="Number of steps per day completed", xlab="Total number of steps")
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-25](figure/unnamed-chunk-25-1.png)
 ##### 4.1 Calculate and report the mean and median total number of steps taken per day. 
 
 ```r
@@ -112,4 +112,4 @@ avg_stepsFull <- aggregate(steps ~ interval + day, data, mean)
 ggplot(avg_stepsFull, aes(x = interval, y = steps)) +  geom_line(aes(group = 1, col = steps)) + ylab("average number of steps")+ xlab("interval") +  ggtitle("Average number of steps by Interval") +facet_grid(scales="free", space="free", .~day)
 ```
 
-![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)
+![plot of chunk unnamed-chunk-28](figure/unnamed-chunk-28-1.png)
