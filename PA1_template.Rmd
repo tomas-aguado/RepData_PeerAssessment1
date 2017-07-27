@@ -61,7 +61,7 @@ missing <-nrow(data[row.has.na,])
 
 ##### 2. Devise a strategy for filling in all of the missing values in the dataset.
 ##### 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
-We will use the avegare value of that day to fill the missing data as only step data is missing:
+We will use the average value of that day to fill the missing data as only step data is missing:
 
 ```{r}
 for (i in 1:nrow(data)) {
