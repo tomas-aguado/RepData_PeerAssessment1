@@ -3,8 +3,6 @@
 ```{r, echo=FALSE, results='hide', warning=FALSE, message=FALSE}
 library(plyr)
 library(ggplot2)
-library(knitr)
-options(digits=2)
 ```
 ## Loading and preprocessing the data
 ##### 1. Load the data (i.e. read.csv()) and clean the NA values
